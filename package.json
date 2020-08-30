@@ -4,12 +4,13 @@
   "description": "",
   "main": "test.js",
   "scripts": {
+    "dev-copy": "webpack-dev-server",
     "dev": "npm-run-all -s generate webpackDev",
     "webpackDev": "webpack-dev-server",
     "build": "npm-run-all -s generate webpackBuild",
     "webpackBuild": "webpack",
     "previewDist": "node previewDist",
-    "generate": "babel-node --preset=@babel/preset-react,@babel/preset-env generateHtml.js",
+    "generate": "babel-node --presets=@babel/preset-react,@babel/preset-env generateHtml.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,7 +19,6 @@
   "dependencies": {
     "@babel/core": "^7.10.5",
     "@babel/node": "^7.10.5",
-    "@babel/plugin-syntax-jsx": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "axios": "^0.19.2",
